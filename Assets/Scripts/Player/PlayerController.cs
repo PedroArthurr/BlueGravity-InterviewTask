@@ -6,10 +6,10 @@ using System.Collections;
 [RequireComponent(typeof(PlayerAnimationController))]
 public class PlayerController : MonoBehaviour
 {
-    [SerializeField] private float moveSpeed = 5.0f;
-    [SerializeField] private float tileSize = 1.0f;
-    private PlayerAnimationController animationController;
+    [SerializeField] private float moveSpeed = 3.0f;
+    [SerializeField] private float tileSize = 0.7f;
 
+    private PlayerAnimationController animationController;
     private Rigidbody2D rb;
     private Vector2 movement;
     private bool isMoving = false;
