@@ -7,12 +7,17 @@ using System.Collections;
 public class PlayerController : MonoBehaviour
 {
     [SerializeField] private float moveSpeed = 3.0f;
-    [SerializeField] private float tileSize = 0.7f;
+    [SerializeField] private float tileSize = 0.5f;
+    [SerializeField] private LayerMask obstacleLayer;
 
     private PlayerAnimationController animationController;
     private Rigidbody2D rb;
     private Vector2 movement;
+    private Vector2 lastDirection = Vector2.down;
     private bool isMoving = false;
+
+    public Vector2 Movement { get => movement; }
+    public Vector2 LastDirection { get => lastDirection; }
 
     private void Awake()
     {
@@ -29,8 +34,13 @@ public class PlayerController : MonoBehaviour
 
             if (movement != Vector2.zero)
             {
-                Vector2 moveDirection = new Vector2(Mathf.Round(movement.x), Mathf.Round(movement.y));
-                StartCoroutine(MoveToNextTile(moveDirection));
+                lastDirection = movement.normalized;
+                Vector2 moveDirection = new(Mathf.Round(movement.x), Mathf.Round(movement.y));
+
+                if (IsPathClear(moveDirection))
+                {
+                    StartCoroutine(MoveToNextTile(moveDirection));
+                }
             }
         }
 
@@ -64,5 +74,11 @@ public class PlayerController : MonoBehaviour
             Mathf.Round(position.y / size) * size,
             position.z
         );
+    }
+
+    private bool IsPathClear(Vector2 direction)
+    {
+        RaycastHit2D hit = Physics2D.Raycast(rb.position, direction, tileSize, obstacleLayer);
+        return hit.collider == null;
     }
 }
