@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fcd69a6f63f61f449988eb7cab342e6c, type: 3}
+  m_Name: UnderwearForWoman
+  m_EditorClassIdentifier: 
+  itemName: Underwear for Women
+  price: 10
+  sprite: {fileID: 21300000, guid: b99109523509be545b6b28641aa46075, type: 3}
+  type: 2
+  description: A (stinky) underwear for women
+  library: {fileID: 7108339969198208228, guid: 294ec8a05da03c842b5271c2ece00111, type: 3}
