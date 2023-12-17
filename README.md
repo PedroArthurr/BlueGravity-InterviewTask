@@ -20,4 +20,4 @@ Special thanks to the creators of the assets used in this project:
 
 ## How to play
 
-The game is already built and ready to play. To play, simply download the latest build from the ["releases section](https://github.com/PedroArthurr/BlueGravity-InterviewTask/releases/tag/release)
+The game is already built and ready to play. To play, simply download the latest build from the [releases section](https://github.com/PedroArthurr/BlueGravity-InterviewTask/releases/tag/release)
