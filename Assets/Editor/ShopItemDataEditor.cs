@@ -1,12 +1,12 @@
 using UnityEditor;
 using UnityEngine;
 
-[CustomEditor(typeof(ShopItemData))]
+[CustomEditor(typeof(ItemData))]
 public class ShopItemDataEditor : Editor
 {
     public override void OnInspectorGUI()
     {
-        ShopItemData shopItem = (ShopItemData)target;
+        ItemData shopItem = (ItemData)target;
 
         DrawDefaultInspector();
 

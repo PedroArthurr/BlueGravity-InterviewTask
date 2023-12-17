@@ -15,6 +15,7 @@ MonoBehaviour:
   itemName: Yellow Armour
   price: 200
   sprite: {fileID: 21300000, guid: 86ec2e09c85457d4aa40da8b9083c6aa, type: 3}
+  previewSprite: {fileID: -1920469283, guid: 41a4adce52c6c3d468e6344c15aad719, type: 3}
   type: 2
   description: An armour worn by the strongest warriors of the Northen Lands
   library: {fileID: 7108339969198208228, guid: 6665ee5a4fe6a8b40a66aafd7879d9bf, type: 3}

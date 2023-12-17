@@ -15,6 +15,7 @@ MonoBehaviour:
   itemName: Blue Armour
   price: 200
   sprite: {fileID: 21300000, guid: 2d892ce50f024b845addaa7b6675f27d, type: 3}
+  previewSprite: {fileID: 743805480, guid: e5396e6565e220743b02bc66c83f2b75, type: 3}
   type: 2
   description: An armour worn by the strongest warriors of the Southern Lands
   library: {fileID: 7108339969198208228, guid: c046d9028f4798245b80404141942787, type: 3}

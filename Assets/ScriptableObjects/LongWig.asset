@@ -15,6 +15,7 @@ MonoBehaviour:
   itemName: Long wig
   price: 30
   sprite: {fileID: 21300000, guid: ec177e418b24b4e4eac018545ced59d5, type: 3}
+  previewSprite: {fileID: -1643951620, guid: 3c6d165f8db61864bbd5d6abd8006ff3, type: 3}
   type: 1
   description: A beautiful long wig
   library: {fileID: 7108339969198208228, guid: eab771e73fe5f51468d0986edd2b9a26, type: 3}

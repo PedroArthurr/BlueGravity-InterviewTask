@@ -15,6 +15,7 @@ MonoBehaviour:
   itemName: Short Wig
   price: 30
   sprite: {fileID: 21300000, guid: bfc53495c42b1184f8fc39a26cbb89cc, type: 3}
+  previewSprite: {fileID: -1018883775, guid: 031c67194cf4a0d40978a66376bf6a74, type: 3}
   type: 1
-  description: A beautiful shor wig
-  library: {fileID: 7108339969198208228, guid: 222ae7f0d9a34144690dfad385ab4ee5, type: 3}
+  description: A beautiful short wig
+  library: {fileID: 7108339969198208228, guid: eab771e73fe5f51468d0986edd2b9a26, type: 3}

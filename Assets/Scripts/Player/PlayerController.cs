@@ -15,9 +15,11 @@ public class PlayerController : MonoBehaviour
     private Vector2 movement;
     private Vector2 lastDirection = Vector2.down;
     private bool isMoving = false;
+    private bool canMove = true;
 
     public Vector2 Movement { get => movement; }
     public Vector2 LastDirection { get => lastDirection; }
+    public bool CanMove { set => canMove = value; }
 
     private void Awake()
     {
@@ -27,7 +29,7 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
-        if (!isMoving)
+        if (!isMoving && canMove)
         {
             movement.x = Input.GetAxisRaw("Horizontal");
             movement.y = Input.GetAxisRaw("Vertical");
@@ -38,9 +40,7 @@ public class PlayerController : MonoBehaviour
                 Vector2 moveDirection = new(Mathf.Round(movement.x), Mathf.Round(movement.y));
 
                 if (IsPathClear(moveDirection))
-                {
                     StartCoroutine(MoveToNextTile(moveDirection));
-                }
             }
         }
 

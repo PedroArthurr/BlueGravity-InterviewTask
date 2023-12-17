@@ -12,9 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fcd69a6f63f61f449988eb7cab342e6c, type: 3}
   m_Name: WizardHat
   m_EditorClassIdentifier: 
-  itemName: Short hair
+  itemName: Wizard hat
   price: 400
   sprite: {fileID: 21300000, guid: 5ba58cfa5b08e3d4c911ced0738481e6, type: 3}
+  previewSprite: {fileID: 325385799, guid: 25725e3c9a8890c4fa9d715e1882e321, type: 3}
   type: 1
   description: Hat worn by the wisest wizards
   library: {fileID: 7108339969198208228, guid: 9150e3cb3f80f7d4d9f605faab391a8f, type: 3}
