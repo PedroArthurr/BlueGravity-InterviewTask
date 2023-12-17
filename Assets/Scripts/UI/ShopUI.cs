@@ -1,3 +1,4 @@
+using TMPro;
 using UnityEngine;
 
 public class ShopUI : MonoBehaviour
@@ -11,6 +12,7 @@ public class ShopUI : MonoBehaviour
     [SerializeField] private Shop shop;
     [SerializeField] private PlayerInventory playerInventory;
     [SerializeField] private PlayerController controller;
+    [SerializeField] private TMP_Text userBalance;
 
     private void PopulateShopItems()
     {
@@ -20,6 +22,8 @@ public class ShopUI : MonoBehaviour
             Destroy(playerItemsContainer.transform.GetChild(i).gameObject);
 
         InitializeShopUI();
+
+        userBalance.text = $"{GameManager.instance.userName}'s current balance: <color=#FFFF00>{playerInventory.currentBalance}</color>";
     }
 
     private void InitializeShopUI()

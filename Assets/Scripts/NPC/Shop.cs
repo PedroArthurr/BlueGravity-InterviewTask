@@ -14,14 +14,22 @@ public class Shop : MonoBehaviour
 
     public void BuyItem(ItemData itemData)
     {
-        //Money thing
-        playerInventory.AddItem(itemData);
-        itemsForSale.Remove(itemData);
+        if (playerInventory.currentBalance >= itemData.price)
+        {
+            playerInventory.currentBalance -= itemData.price; 
+            playerInventory.AddItem(itemData);
+            itemsForSale.Remove(itemData); 
+        }
+        else
+        {
+            Debug.Log("Not enough money");
+        }
     }
 
     public void SellItem(ItemData itemData)
     {
+        playerInventory.currentBalance += itemData.price;
         playerInventory.RemoveItem(itemData);
-        itemsForSale.Add(itemData);
+        itemsForSale.Add(itemData); 
     }
 }

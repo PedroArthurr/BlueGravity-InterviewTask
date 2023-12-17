@@ -522,7 +522,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a709d266c0811d940b960dda00f31074, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentBalance: 1000
+  currentBalance: 600
   hat: {fileID: 4659198057233385907}
   outfit: {fileID: 4659198058300627686}
   equippedHat: {fileID: 0}

@@ -8,6 +8,7 @@ public class InventoryUI : MonoBehaviour
     [SerializeField] private PlayerController playerController;
     [SerializeField] private GameObject container;
     [SerializeField] private GameObject inventoryPanel;
+    [SerializeField] private GameObject inventoryPanelBG;
     [SerializeField] private ItemSlot itemSlotPrefab;
     [SerializeField] private Image equippedHat;
     [SerializeField] private Image equippedOutfit;
@@ -42,6 +43,7 @@ public class InventoryUI : MonoBehaviour
     public void SetPanel(bool state)
     {
         container.SetActive(state);
+        inventoryPanelBG.SetActive(state);
 
         GameManager.instance.playerCanInteract = !state;
     }
