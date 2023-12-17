@@ -86,6 +86,5 @@ public class ItemSlot : MonoBehaviour, IDragHandler, IEndDragHandler
             itemImage.color = new Color(itemImage.color.r, itemImage.color.g, itemImage.color.b, .5f);
         else
             itemImage.color = new Color(itemImage.color.r, itemImage.color.g, itemImage.color.b, 1);
-        print(isEquiped);
     }
 }

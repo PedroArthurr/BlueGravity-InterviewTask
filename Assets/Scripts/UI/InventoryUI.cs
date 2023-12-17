@@ -16,17 +16,34 @@ public class InventoryUI : MonoBehaviour
     [SerializeField] private TMP_Text balance;
     [SerializeField] private TMP_Text date;
     [SerializeField] private TMP_Text time;
+
     private void Awake()
     {
         playerInventory.InventoryUI = this;
+        UpdateUI();
     }
 
     public void SetInventoryPanel()
     {
-        container.SetActive(!container.activeInHierarchy);
+        if (GameManager.instance.playerCanInteract)
+        {
+            SetPanel(true);
+        }
+        else
+        {
+            SetPanel(false);
+        }
+
         playerController.CanMove = !container.activeInHierarchy;
 
         userName.text = GameManager.instance.userName;
+    }
+
+    public void SetPanel(bool state)
+    {
+        container.SetActive(state);
+
+        GameManager.instance.playerCanInteract = !state;
     }
 
     public void UpdateUI()
@@ -68,9 +85,7 @@ public class InventoryUI : MonoBehaviour
 
     private void Update()
     {
-        //Current date-time because why not? :P
-        var dateTime = System.DateTime.Now;
-        date.text = $"{dateTime.Day}.{dateTime:ddd}";
-        time.text = dateTime.ToString("HH:mm");
+        date.text = $"{GameManager.instance.dateTime.Day}.{GameManager.instance.dateTime:ddd}";
+        time.text = GameManager.instance.dateTime.ToString("HH:mm");
     }
 }

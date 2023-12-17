@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class EquipArea : MonoBehaviour, IDropHandler
+public class EquipArea : MonoBehaviour, IDropHandler, IPointerClickHandler
 {
     [SerializeField] private PlayerInventory inventory;
     [SerializeField] private ItemType equipType;
@@ -18,14 +18,43 @@ public class EquipArea : MonoBehaviour, IDropHandler
 
     private void EquipItem(ItemData itemData)
     {
-        print(itemData.description);
-        switch(equipType)
+        switch (equipType)
         {
             case ItemType.HAT:
                 inventory.EquippedHat = itemData;
                 break;
+
             case ItemType.OUTFIT:
                 inventory.EquippedOutfit = itemData;
+                break;
+        }
+
+        inventory.OnEquippedItem();
+    }
+
+    public void OnPointerClick(PointerEventData eventData)
+    {
+        UnequipItem();
+    }
+
+    private void UnequipItem()
+    {
+        switch (equipType)
+        {
+            case ItemType.HAT:
+                if (inventory.EquippedHat != null)
+                {
+                    inventory.UnequipItem(inventory.EquippedHat);
+                    inventory.EquippedHat = null;
+                }
+                break;
+
+            case ItemType.OUTFIT:
+                if (inventory.EquippedOutfit != null)
+                {
+                    inventory.UnequipItem(inventory.EquippedOutfit);
+                    inventory.EquippedOutfit = null;
+                }
                 break;
         }
 

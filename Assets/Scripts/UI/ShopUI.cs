@@ -4,11 +4,13 @@ public class ShopUI : MonoBehaviour
 {
     [Header("Shop Setup")]
     [SerializeField] private GameObject shopPanel;
+
     [SerializeField] private GameObject itemSlotPrefab;
     [SerializeField] private Transform shopItemsContainer;
     [SerializeField] private Transform playerItemsContainer;
     [SerializeField] private Shop shop;
     [SerializeField] private PlayerInventory playerInventory;
+    [SerializeField] private PlayerController controller;
 
     private void PopulateShopItems()
     {
@@ -19,6 +21,7 @@ public class ShopUI : MonoBehaviour
 
         InitializeShopUI();
     }
+
     private void InitializeShopUI()
     {
         foreach (var itemData in shop.itemsForSale)
@@ -45,23 +48,19 @@ public class ShopUI : MonoBehaviour
     {
         shopPanel.SetActive(true);
         PopulateShopItems();
+        controller.CanMove = false;
     }
 
     public void CloseShop()
     {
         shopPanel.SetActive(false);
+
+        GameManager.instance.playerCanInteract = true;
+        controller.CanMove = true;
     }
 
     public void OnShop()
     {
         PopulateShopItems();
-    }
-
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            CloseShop();
-        }
     }
 }

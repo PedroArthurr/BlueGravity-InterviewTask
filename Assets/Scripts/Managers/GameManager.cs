@@ -1,24 +1,29 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
     public string userName;
+    public DateTime dateTime;
+    public bool playerCanInteract = true;
 
     private void Awake()
     {
         instance = this;
     }
 
-    void Start()
+    private void Start()
     {
         Application.targetFrameRate = 60;
         userName = Environment.UserName;
-        print(userName);
         if (Environment.UserName == null)
             userName = "Username";
+    }
+
+    private void Update()
+    {
+        //Current date-time because why not? :P
+        dateTime = DateTime.Now;
     }
 }

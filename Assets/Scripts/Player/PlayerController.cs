@@ -1,5 +1,5 @@
-using UnityEngine;
 using System.Collections;
+using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody2D))]
 [RequireComponent(typeof(Animator))]

@@ -6,6 +6,7 @@ public class ItemData : ScriptableObject
 {
     [Header("Item info:")]
     public string itemName;
+
     public int price;
     public Sprite sprite;
     public Sprite previewSprite;

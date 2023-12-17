@@ -1,5 +1,5 @@
-using UnityEngine;
 using System.Collections.Generic;
+using UnityEngine;
 
 public class ItemsManager : MonoBehaviour
 {
@@ -10,11 +10,11 @@ public class ItemsManager : MonoBehaviour
     {
         GenerateItems();
     }
+
     public void GenerateItems()
     {
         foreach (var data in itemDatas)
         {
-            
         }
     }
 
