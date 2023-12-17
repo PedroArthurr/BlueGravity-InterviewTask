@@ -27,7 +27,11 @@ public class PlayerInventory : MonoBehaviour
     }
 
     public void RemoveItem(ItemData item)
-    {
+    { 
+        if (item == equippedHat || item == equippedOutfit)
+        {
+            UnequipItem(item);
+        }
         items.Remove(item);
         inventoryUI.UpdateUI();
     }
@@ -47,5 +51,22 @@ public class PlayerInventory : MonoBehaviour
             hat.spriteLibraryAsset = equippedHat.library;
         if(equippedOutfit != null)
             outfit.spriteLibraryAsset= equippedOutfit.library;
+    }
+
+    private void UnequipItem(ItemData item)
+    {
+        if (item == equippedHat)
+        {
+            equippedHat = null;
+            hat.spriteLibraryAsset = null;
+            hat.GetComponent<SpriteRenderer>().sprite = null;
+        }
+        else if (item == equippedOutfit)
+        {
+            equippedOutfit = null; 
+            outfit.spriteLibraryAsset = null;
+            outfit.GetComponent<SpriteRenderer>().sprite = null;
+        }
+        OnEquippedItem();
     }
 }

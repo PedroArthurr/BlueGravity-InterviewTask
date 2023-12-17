@@ -25,7 +25,7 @@ public class ItemSlot : MonoBehaviour, IDragHandler, IEndDragHandler
     {
         canvasGroup = GetComponent<CanvasGroup>();
         rectTransform = GetComponent<RectTransform>();
-        originalParent = transform.parent; 
+        originalParent = transform.parent;
     }
 
     public void Initialize(Sprite s, string n, string d, string v, ItemData i)
@@ -82,5 +82,10 @@ public class ItemSlot : MonoBehaviour, IDragHandler, IEndDragHandler
     public void DroppedOnValidArea()
     {
         isEquiped = !isEquiped;
+        if (isEquiped)
+            itemImage.color = new Color(itemImage.color.r, itemImage.color.g, itemImage.color.b, .5f);
+        else
+            itemImage.color = new Color(itemImage.color.r, itemImage.color.g, itemImage.color.b, 1);
+        print(isEquiped);
     }
 }

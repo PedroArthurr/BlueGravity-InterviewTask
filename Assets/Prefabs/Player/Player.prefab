@@ -124,7 +124,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 11
-  m_Sprite: {fileID: -1643951620, guid: 3c6d165f8db61864bbd5d6abd8006ff3, type: 3}
+  m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -132,7 +132,7 @@ SpriteRenderer:
   m_Size: {x: 2, y: 2}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!114 &4659198057233385907
@@ -148,7 +148,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Library: []
-  m_SpriteLibraryAsset: {fileID: 7108339969198208228, guid: 222ae7f0d9a34144690dfad385ab4ee5, type: 3}
+  m_SpriteLibraryAsset: {fileID: 0}
 --- !u!114 &4659198057233385904
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -163,7 +163,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_CategoryHash: 0
   m_labelHash: 0
-  m_SpriteKey: 801.55615
+  m_SpriteKey: 0
 --- !u!1 &4659198057555928854
 GameObject:
   m_ObjectHideFlags: 0
@@ -435,7 +435,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 12
-  m_Sprite: {fileID: -1920469283, guid: 41a4adce52c6c3d468e6344c15aad719, type: 3}
+  m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -443,7 +443,7 @@ SpriteRenderer:
   m_Size: {x: 2, y: 2}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!114 &4659198058300627686
@@ -462,7 +462,7 @@ MonoBehaviour:
   - m_Name: WalkUp
     m_Hash: 0
     m_CategoryList: []
-  m_SpriteLibraryAsset: {fileID: 7108339969198208228, guid: 6665ee5a4fe6a8b40a66aafd7879d9bf, type: 3}
+  m_SpriteLibraryAsset: {fileID: 0}
 --- !u!114 &4659198058300627685
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -477,7 +477,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_CategoryHash: 0
   m_labelHash: 0
-  m_SpriteKey: 801.55615
+  m_SpriteKey: 0
 --- !u!1 &6997742504846212689
 GameObject:
   m_ObjectHideFlags: 0
@@ -522,6 +522,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a709d266c0811d940b960dda00f31074, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentBalance: 1000
+  hat: {fileID: 4659198057233385907}
+  outfit: {fileID: 4659198058300627686}
   equippedHat: {fileID: 0}
   equippedOutfit: {fileID: 0}
-  items: []
+  items:
+  - {fileID: 11400000, guid: dd207b87593d72d48be89556f0eb7ef7, type: 2}
+  - {fileID: 11400000, guid: 341d0c4f3d9c0d643b95136f002ead93, type: 2}

@@ -12,11 +12,12 @@ public class InventoryUI : MonoBehaviour
     [SerializeField] private Image equippedHat;
     [SerializeField] private Image equippedOutfit;
 
+    [SerializeField] private TMP_Text userName;
+    [SerializeField] private TMP_Text balance;
     [SerializeField] private TMP_Text date;
     [SerializeField] private TMP_Text time;
     private void Awake()
     {
-        UpdateUI();
         playerInventory.InventoryUI = this;
     }
 
@@ -24,6 +25,8 @@ public class InventoryUI : MonoBehaviour
     {
         container.SetActive(!container.activeInHierarchy);
         playerController.CanMove = !container.activeInHierarchy;
+
+        userName.text = GameManager.instance.userName;
     }
 
     public void UpdateUI()
@@ -59,6 +62,8 @@ public class InventoryUI : MonoBehaviour
             equippedOutfit.sprite = null;
             equippedOutfit.gameObject.SetActive(false);
         }
+
+        balance.text = playerInventory.currentBalance.ToString();
     }
 
     private void Update()

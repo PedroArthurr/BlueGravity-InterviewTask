@@ -3,9 +3,10 @@ using UnityEngine;
 
 public class Shopkeeper : MonoBehaviour, IInteractable
 {
-    [SerializeField] private List<Item> availableItems = new();
+    [SerializeField] private Shop shop;
     public void Interact()
     {
         Debug.Log("Interaction with: " + gameObject.name, gameObject);
+        shop.InitializeShop();
     }
 }

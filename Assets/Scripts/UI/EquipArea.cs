@@ -12,6 +12,7 @@ public class EquipArea : MonoBehaviour, IDropHandler
         if (droppedItemSlot != null)
         {
             EquipItem(droppedItemSlot.Data);
+            droppedItemSlot.DroppedOnValidArea();
         }
     }
 

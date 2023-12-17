@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 3703782730167101327}
   - component: {fileID: 3703782730167101325}
   - component: {fileID: 3703782730167101322}
+  - component: {fileID: 1228316550}
   m_Layer: 6
   m_Name: Shopkeeper
   m_TagString: Untagged
@@ -49,6 +50,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f8e72f14eeef512468458fa8b4eb64b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  shop: {fileID: 1228316550}
 --- !u!212 &3703782730167101327
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -89,7 +91,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 1618029746, guid: 6d55f6f4cea0e4f49b2154db3000eff3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -148,6 +150,26 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.5009776, y: 0.07269915}
   m_EdgeRadius: 0
+--- !u!114 &1228316550
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3703782730167101324}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b5291d57c5332b4290abb5bff22ba50, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemsForSale:
+  - {fileID: 11400000, guid: 3d7cee396b97b294e837ae301e1a7dd5, type: 2}
+  - {fileID: 11400000, guid: 7db568a7b7aa96646878c4cd85d154d6, type: 2}
+  - {fileID: 11400000, guid: cb9533eb9991f89439acb43bcdc32a8e, type: 2}
+  - {fileID: 11400000, guid: c72554133d050f94ba105e1f7c00e65e, type: 2}
+  - {fileID: 11400000, guid: fd8f8d20001c87d4ca8ec058d61d82bf, type: 2}
+  shopUI: {fileID: 0}
+  playerInventory: {fileID: 0}
 --- !u!1 &3703782730666930320
 GameObject:
   m_ObjectHideFlags: 0
