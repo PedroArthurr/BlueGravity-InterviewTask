@@ -15,7 +15,7 @@ Special thanks to the creators of the assets used in this project:
 
 - GUI elements from ["Cryo's Mini GUI" by Paperhatlizard](https://paperhatlizard.itch.io/cryos-mini-gui).
 - Environment assets from ["Mystic Woods" by Game-Endeavor](https://game-endeavor.itch.io/mystic-woods).
-- Character and object sprites from ["Clarity" by Gossamore](https://gossamore.itch.io/clarity).
+- Font asset from ["Clarity" by Gossamore](https://gossamore.itch.io/clarity).
 - Character base assets from ["Character Base" by Seliel the Shaper](https://seliel-the-shaper.itch.io/character-base).
 
 ## Getting Started
