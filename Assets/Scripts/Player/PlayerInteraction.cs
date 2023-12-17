@@ -8,7 +8,7 @@ public class PlayerInteraction : MonoBehaviour
 
     private PlayerController controller;
     private IInteractable interactableInRange;
-
+    private IInteractable lastInteractableInRange;
     private void Start() => controller = GetComponentInParent<PlayerController>();
 
     private void Update()
@@ -26,18 +26,32 @@ public class PlayerInteraction : MonoBehaviour
     {
         Vector2 direction = GetFacingDirection();
         RaycastHit2D hit = Physics2D.Raycast(transform.position, direction, interactionDistance, interactableLayer);
+
         if (hit.collider != null)
+        {
             if (hit.collider.TryGetComponent<IInteractable>(out var interactable))
             {
-                interactableInRange = interactable;
-                OnPotentialInteraction();
+                if (interactableInRange != interactable)
+                {
+                    interactableInRange = interactable;
+                    OnPotentialInteraction(hit);
+                }
             }
-            else
-                interactableInRange = null;
+            lastInteractableInRange = interactableInRange;
+        }
+        else
+        {
+            if (lastInteractableInRange != null)
+            {
+                lastInteractableInRange.HideInteractionIcon();
+                lastInteractableInRange = null;
+            }
+            interactableInRange = null;
+        }
     }
-
-    private void OnPotentialInteraction()
+    private void OnPotentialInteraction(RaycastHit2D hit)
     {
+        hit.collider.GetComponent<IInteractable>().ShowInteractionIcon();
     }
 
     private Vector2 GetFacingDirection()

@@ -17,5 +17,5 @@ MonoBehaviour:
   sprite: {fileID: 21300000, guid: b99109523509be545b6b28641aa46075, type: 3}
   previewSprite: {fileID: 987842334, guid: 448bbb72b05885f4b8d584545b49195e, type: 3}
   type: 2
-  description: A (stinky) underwear for women
+  description: A underwear for women
   library: {fileID: 7108339969198208228, guid: 294ec8a05da03c842b5271c2ece00111, type: 3}

@@ -18,4 +18,4 @@ MonoBehaviour:
   previewSprite: {fileID: -1643951620, guid: 3c6d165f8db61864bbd5d6abd8006ff3, type: 3}
   type: 1
   description: A beautiful long wig
-  library: {fileID: 7108339969198208228, guid: eab771e73fe5f51468d0986edd2b9a26, type: 3}
+  library: {fileID: 7108339969198208228, guid: 222ae7f0d9a34144690dfad385ab4ee5, type: 3}

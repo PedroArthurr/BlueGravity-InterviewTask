@@ -12,6 +12,7 @@ public class PlayerInventory : MonoBehaviour
     [SerializeField] private ItemData equippedOutfit;
 
     [SerializeField] private List<ItemData> items = new();
+    [SerializeField] private GameObject tutorialIcon;
 
     private InventoryUI inventoryUI;
 
@@ -40,6 +41,7 @@ public class PlayerInventory : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.E))
         {
+            tutorialIcon.SetActive(false);
             if (!GameManager.instance.playerCanInteract)
                 return;
             inventoryUI.SetInventoryPanel();
